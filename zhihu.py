@@ -741,7 +741,7 @@ class Answer:
             # else:
             # print file_name
             if file_name.find('/') != -1:
-                file_name.replace('_', '/')
+                file_name = file_name.replace('/', '_')
             f = open(os.path.join(os.path.join(os.getcwd(), "text"), file_name), "wt")
             f.write(self.get_question().get_title() + "\n\n")
         if platform.system() == 'Windows':
